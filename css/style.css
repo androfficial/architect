@@ -493,7 +493,7 @@ body._lock {
 }
 
 .info-header__column:not(:last-child) {
-  margin: 0px 100px 0px 0px;
+  margin: 0px 60px 0px 0px;
 }
 
 .info-header__column._show .info-header__submenu {
@@ -645,6 +645,7 @@ body._lock {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  position: relative;
 }
 
 @media (min-width: 992px) {
