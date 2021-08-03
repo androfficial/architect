@@ -33,6 +33,11 @@ if (infoHeader) {
       }
       if (e.target.closest('.info-header__submenu') && e.target.classList.contains('info-header__link')) {
          e.preventDefault();
+         if (document.querySelector('.info-header__link._selected')) {
+            document.querySelector('.info-header__link._selected').classList.remove('_selected');
+         }  
+         e.target.classList.add('_selected');
+
          let openMenu = document.querySelector('.info-header__column._show');
          let openMenuFirstElem = openMenu.firstElementChild;
          let firstElemContent = openMenuFirstElem.innerHTML;
