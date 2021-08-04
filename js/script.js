@@ -33,3 +33,29 @@ if (infoHeader) {
       }
    });
 }
+new Swiper('.projects__items', {
+	// Optional parameters
+	loop: false,
+	slidesPerView: 3,
+	spaceBetween: 20,
+ 
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.slider-arrow.paginations-slider__arrow-next',
+	  prevEl: '.slider-arrow.paginations-slider__arrow-prev',
+	},
+
+ });
+
+new Swiper('.holiday__items', {
+	// Optional parameters
+	loop: false,
+	slidesPerView: 1,
+ 
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.slider-arrow.paginations-slider__arrow-next',
+	  prevEl: '.slider-arrow.paginations-slider__arrow-prev',
+	},
+
+});
