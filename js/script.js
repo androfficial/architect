@@ -15,7 +15,6 @@ document.addEventListener('click', (e) => {
 });
 const moveUpBtn = document.getElementById('moveUp');
 const moveDownBtn = document.getElementById('moveDown');
-const sectionNumber = document.querySelector('.section-number__num');
 
 new fullpage('#page', {
    autoScrolling: true,
