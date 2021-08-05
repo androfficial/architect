@@ -250,12 +250,54 @@ section {
           justify-content: center;
   text-align: center;
   border: 2px solid #fff;
+  color: #fff;
   height: 60px;
   min-width: 200px;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.input {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 157.1428571429%;
+  border: 2px solid #fff;
+  color: #fff;
+  height: 60px;
+  padding: 0 25px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.input::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+
+.input::-moz-placeholder {
+  text-transform: uppercase;
+}
+
+.input:-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.input::-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.input::placeholder {
+  text-transform: uppercase;
+}
+
+.input._error {
+  border-top-color: red;
+  border-left-color: red;
+  border-bottom-color: red;
 }
 
 ._icon {
@@ -283,6 +325,27 @@ section {
   font-size: 18px;
   line-height: 122.2222222222%;
   color: #fff;
+}
+
+._contacts-title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0px 0px 3px 0px;
+}
+
+._contacts-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;
+}
+
+._contacts-text:not(:last-child) {
+  margin: 0px 0px 3px 0px;
 }
 
 .pagination {
@@ -844,8 +907,8 @@ section {
 .services::before {
   content: "";
   position: absolute;
-  left: 20%;
-  bottom: -50%;
+  left: 350px;
+  bottom: -550px;
   -webkit-transform: translateY(-25%);
       -ms-transform: translateY(-25%);
           transform: translateY(-25%);
@@ -980,7 +1043,7 @@ section {
 .projects::before {
   content: "";
   position: absolute;
-  top: -50%;
+  top: -550px;
   right: 100px;
   width: 725px;
   height: 725px;
@@ -994,7 +1057,7 @@ section {
 .projects::after {
   content: "";
   position: absolute;
-  left: -12%;
+  left: -180px;
   bottom: 0;
   width: 725px;
   height: 725px;
@@ -1167,7 +1230,7 @@ section {
 .holiday::before {
   content: "";
   position: absolute;
-  top: -50%;
+  top: -550px;
   right: 100px;
   width: 725px;
   height: 725px;
@@ -1181,7 +1244,7 @@ section {
 .holiday::after {
   content: "";
   position: absolute;
-  left: -12%;
+  left: -180px;
   bottom: 0;
   width: 725px;
   height: 725px;
@@ -1354,8 +1417,8 @@ section {
 .team::before {
   content: "";
   position: absolute;
-  left: 10%;
-  bottom: -40%;
+  left: 200px;
+  bottom: -450px;
   width: 725px;
   height: 725px;
   z-index: 4;
@@ -1368,8 +1431,8 @@ section {
 .team::after {
   content: "";
   position: absolute;
-  top: 6%;
-  right: -12%;
+  top: 65px;
+  right: -200px;
   width: 725px;
   height: 725px;
   z-index: 4;
@@ -1633,6 +1696,200 @@ section {
   line-height: 128.5714285714%;
 }
 
+.contacts {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.contacts::before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  right: -145px;
+  width: 725px;
+  height: 725px;
+  z-index: 4;
+  background-image: url(../img/contacts/dots-2.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+}
+
+.contacts::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 950px;
+  height: 230px;
+  z-index: 4;
+  background-image: url(../img/contacts/dots.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+}
+
+.contacts__container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 5;
+}
+
+.contacts__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contacts__title:not(:last-child) {
+  margin: 0px 0px 1.3095238095em 0px;
+}
+
+.contacts__inner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__details {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 585px;
+          flex: 0 0 585px;
+}
+
+.contacts__info {
+  margin: 0px 0px 85px 0px;
+}
+
+.contacts__location {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.contacts__picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contacts__picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 3;
+  background-color: #000;
+}
+
+.contacts__picture::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.info-contacts__address {
+  margin: 0px 0px 20px 0px;
+}
+
+.info-contacts__email {
+  margin: 0px 0px 20px 0px;
+}
+
+.info-contacts__email-text {
+  position: relative;
+}
+
+.info-contacts__email-text::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  background-color: #fff;
+  height: 1px;
+  width: 0;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.info-contacts__phone-text {
+  position: relative;
+}
+
+.info-contacts__phone-text::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  background-color: #fff;
+  height: 1px;
+  width: 0;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.form__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-right-width: 1px;
+}
+
+.form__btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
+  border-left-width: 1px;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -1640,6 +1897,10 @@ section {
 }
 
 @media (min-width: 992px) {
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
   .social-list__link ._icon:hover {
     fill: aqua;
   }
@@ -1674,12 +1935,14 @@ section {
     left: 0;
   }
 
-  .intro__btn:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+  .info-contacts__email-text:hover::after {
+    width: 100%;
+    left: 0;
   }
 
-  .about__btn:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+  .info-contacts__phone-text:hover::after {
+    width: 100%;
+    left: 0;
   }
 }
 
