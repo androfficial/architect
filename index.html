@@ -99,8 +99,8 @@
 		</div>
 	</div>
 </header>
-	<main class="page">
-		<section class="page__intro intro">
+	<main class="page" id="page">
+		<section class="page__intro intro section" data-anchor="intro">
 			<div class="intro__container _container">
 				<div class="intro__content">
 					<h1 class="intro__title _title">ARCHITECTURAL STUDIO</h1>
@@ -112,7 +112,7 @@
 				<img src="img/intro/01.jpg" alt="Фон">
 			</div>
 		</section>
-		<section class="page__about about">
+		<section class="page__about about section" data-anchor="about">
 			<div class="about__container _container">
 				<div class="about__content">
 					<h2 class="about__title _title">ABOUT US</h2>
@@ -127,7 +127,7 @@
 				<img src="img/about/01.jpeg" alt="Фон">
 			</div>
 		</section>	
-		<section class="page__services services">
+		<section class="page__services services section" data-anchor="services">
 			<div class="services__container _container">
 				<div class="services__content">
 					<h2 class="services__title _title">SERVICES</h2>
@@ -193,7 +193,7 @@
 				<img src="img/services/01.jpg" alt="Фон">
 			</div>
 		</section>
-		<section class="page__projects projects">
+		<section class="page__projects projects section" data-anchor="projects">
 			<div class="projects__container _container">
 				<div class="projects__content">
 					<h2 class="projects__title _title">OUR PROJECTS</h2>
@@ -267,7 +267,7 @@
 				<img src="img/projects/01.jpg" alt="Фон">
 			</div>
 		</section>
-		<section class="page__holiday holiday">
+		<section class="page__holiday holiday section" data-anchor="holiday">
 			<div class="holiday__container _container">
 				<div class="holiday__content">
 					<h2 class="holiday__title _title">HOLIDAY HOUSE</h2>
@@ -325,7 +325,7 @@
 				<img src="img/holiday/01.jpg" alt="Фон">
 			</div>
 		</section>
-		<section class="page__team team">
+		<section class="page__team team section" data-anchor="team">
 			<div class="team__container _container">
 				<div class="team__content">
 					<h2 class="team__title _title">OUR TEAM</h2>
@@ -361,7 +361,7 @@
 				<img src="img/team/01.jpg" alt="Фон">
 			</div>
 		</section>
-		<section class="page__testimonials testimonials">
+		<section class="page__testimonials testimonials section" data-anchor="page__testimonials">
 			<div class="testimonials__container _container">
 				<div class="testimonials__content">
 					<h2 class="testimonials__title _title">TESTIMONIALS</h2>
@@ -427,7 +427,7 @@
 				<img src="img/testimonials/01.jpg" alt="Фон">
 			</div>
 		</section>
-		<section class="page__contacts contacts">
+		<section class="page__contacts contacts section" data-anchor="contacts">
 			<div class="contacts__container _container">
 				<div class="contacts__content">
 					<h2 class="contacts__title _title">CONTACT US</h2>
@@ -474,39 +474,83 @@
 				<img src="img/contacts/01.jpg" alt="Фон">
 			</div>
 		</section>
-		<div class="pagination">
-			<div class="pagination__inner">
-				<div class="pagination__arrows arrows-nav">
-					<button class="arrows-nav__arrow" type="button">
-						<svg class="_icon">
-							<use xlink:href=img/sprite.svg#nav-arrow-down></use>
-						</svg>
-					</button>
-					<button class="arrows-nav__arrow" type="button">
-						<svg class="_icon">
-							<use xlink:href=img/sprite.svg#nav-arrow-down></use>
-						</svg>
-					</button>
-				</div>
-				<ul class="pagination__social social-list">
-					<li class="social-list__item">
-						<a href="#" class="social-list__link" target="_blank">
-							<svg class="_icon">
-								<use xlink:href=img/sprite.svg#facebook></use>
-							</svg>
-						</a>
-					</li>
-					<li class="social-list__item">
-						<a href="#" class="social-list__link" target="_blank">
-							<svg class="_icon">
-								<use xlink:href=img/sprite.svg#instagram></use>
-							</svg>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
 	</main>
+	<div class="pagination">
+		<div class="pagination__inner">
+			<div class="pagination__arrows arrows-nav">
+				<button class="arrows-nav__arrow" type="button" id="moveUp">
+					<svg class="_icon">
+						<use xlink:href=img/sprite.svg#nav-arrow-down></use>
+					</svg>
+				</button>
+				<button class="arrows-nav__arrow" type="button" id="moveDown">
+					<svg class="_icon">
+						<use xlink:href=img/sprite.svg#nav-arrow-down></use>
+					</svg>
+				</button>
+			</div>
+			<ul class="pagination__social social-list">
+				<li class="social-list__item">
+					<a href="#" class="social-list__link" target="_blank">
+						<svg class="_icon">
+							<use xlink:href=img/sprite.svg#facebook></use>
+						</svg>
+					</a>
+				</li>
+				<li class="social-list__item">
+					<a href="#" class="social-list__link" target="_blank">
+						<svg class="_icon">
+							<use xlink:href=img/sprite.svg#instagram></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="scrollbar" id="scrollbar">
+		<ul class="scrollbar__list">
+			<li class="scrollbar__item" data-menuanchor="intro">
+				<a href="#intro" class="scrollbar__link">
+					<span class="scrollbar__point"></span>
+				</a>
+			</li>
+			<li class="scrollbar__item" data-menuanchor="about">
+				<a href="#about" class="scrollbar__link">
+					<span class="scrollbar__point"></span>
+				</a>
+			</li>
+			<li class="scrollbar__item" data-menuanchor="services">
+				<a href="#services" class="scrollbar__link">
+					<span class="scrollbar__point"></span>
+				</a>
+			</li>
+			<li class="scrollbar__item" data-menuanchor="projects">
+				<a href="#projects" class="scrollbar__link">
+					<span class="scrollbar__point"></span>
+				</a>
+			</li>
+			<li class="scrollbar__item" data-menuanchor="holiday">
+				<a href="#holiday" class="scrollbar__link">
+					<span class="scrollbar__point"></span>
+				</a>
+			</li>
+			<li class="scrollbar__item" data-menuanchor="team">
+				<a href="#team" class="scrollbar__link">
+					<span class="scrollbar__point"></span>
+				</a>
+			</li>
+			<li class="scrollbar__item" data-menuanchor="testimonials">
+				<a href="#testimonials" class="scrollbar__link">
+					<span class="scrollbar__point"></span>
+				</a>
+			</li>
+			<li class="scrollbar__item" data-menuanchor="contacts">
+				<a href="#contacts" class="scrollbar__link">
+					<span class="scrollbar__point"></span>
+				</a>
+			</li>
+		</ul>
+	</div>
 </div>
 
 <script src="js/vendors.js"></script>

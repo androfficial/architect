@@ -444,6 +444,46 @@ section {
   transition: fill 0.3s ease 0s;
 }
 
+.scrollbar {
+  position: fixed;
+  z-index: 1000;
+  top: 30%;
+  right: 10%;
+}
+
+.scrollbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scrollbar__item:not(:last-child) {
+  margin: 0px 0px 20px 0px;
+}
+
+.scrollbar__item.active .scrollbar__point {
+  background-color: #fff;
+}
+
+.scrollbar__point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
 .header {
   position: fixed;
   top: 0;

@@ -13,6 +13,23 @@ document.addEventListener('click', (e) => {
       }
    }
 });
+const moveUpBtn = document.getElementById('moveUp');
+const moveDownBtn = document.getElementById('moveDown');
+
+new fullpage('#page', {
+   autoScrolling: true,
+   scrollHorizontally: true,
+   // navigation: true,
+   menu: '#scrollbar',
+   anchors: ['intro', 'about', 'services', 'projects', 'holiday', 'team', 'testimonials', 'contacts'],
+});
+
+moveUpBtn.addEventListener('click', (e) => {
+   fullpage_api.moveSectionUp();
+});
+moveDownBtn.addEventListener('click', (e) => {
+   fullpage_api.moveSectionDown();
+});
 const infoHeader = document.querySelector('.info-header');
 
 if (infoHeader) {
