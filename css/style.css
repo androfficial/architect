@@ -232,6 +232,14 @@ body._lock {
 
 section {
   overflow: hidden;
+  position: relative;
+}
+
+.section-inside-wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .btn {
@@ -730,14 +738,6 @@ section {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 
-.intro {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
 .intro::before {
   content: "";
   position: absolute;
@@ -825,14 +825,6 @@ section {
 
 .intro__btn {
   margin: 20px 0px 0px 0px;
-}
-
-.about {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
 }
 
 .about::before {
@@ -937,14 +929,6 @@ section {
   height: 100%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.8);
-}
-
-.services {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
 }
 
 .services::before {
@@ -1073,14 +1057,6 @@ section {
 .item-services__text {
   font-weight: 300;
   line-height: 128.5714285714%;
-}
-
-.projects {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
 }
 
 .projects::before {
@@ -1262,14 +1238,6 @@ section {
   letter-spacing: 2px;
 }
 
-.holiday {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
 .holiday::before {
   content: "";
   position: absolute;
@@ -1449,14 +1417,6 @@ section {
   letter-spacing: 2px;
 }
 
-.team {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
 .team::before {
   content: "";
   position: absolute;
@@ -1587,14 +1547,6 @@ section {
   line-height: 122.2222222222%;
   text-transform: uppercase;
   letter-spacing: 2px;
-}
-
-.testimonials {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
 }
 
 .testimonials::before {
@@ -1737,14 +1689,6 @@ section {
 .item-testimonials__text {
   font-weight: 300;
   line-height: 128.5714285714%;
-}
-
-.contacts {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
 }
 
 .contacts::before {

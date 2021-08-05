@@ -22,6 +22,18 @@ new fullpage('#page', {
    // navigation: true,
    menu: '#scrollbar',
    anchors: ['intro', 'about', 'services', 'projects', 'holiday', 'team', 'testimonials', 'contacts'],
+   // onLeave: function(origin, destination, direction){
+	// 	var leavingSection = this;
+
+	// 	//после покидания раздела 2
+	// 	if(origin.index == 1 && direction =='down'){
+	// 		alert("Going to section 3!");
+	// 	}
+
+	// 	else if(origin.index == 1 && direction == 'up'){
+	// 		alert("Going to section 1!");
+	// 	}
+	// }
 });
 
 moveUpBtn.addEventListener('click', (e) => {
