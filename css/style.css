@@ -242,6 +242,16 @@ section {
   display: flex;
 }
 
+.section-number {
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-40%);
+      -ms-transform: translateY(-40%);
+          transform: translateY(-40%);
+  z-index: 1000;
+  right: 125px;
+}
+
 .btn {
   font-family: "Montserrat";
   font-weight: 300;
@@ -475,21 +485,58 @@ section {
           align-items: center;
 }
 
+.scrollbar__item {
+  position: relative;
+}
+
 .scrollbar__item:not(:last-child) {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 40px 0px;
 }
 
 .scrollbar__item.active .scrollbar__point {
   background-color: #fff;
 }
 
+.scrollbar__item.active .scrollbar__section-num {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
 .scrollbar__point {
   position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -4px;
   width: 10px;
   height: 10px;
+  z-index: 1;
   border-radius: 50%;
   background-color: transparent;
   border: 2px solid #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.scrollbar__section-num {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  position: absolute;
+  top: -16px;
+  left: -75px;
+  z-index: 1;
+  font-size: 36px;
+  line-height: 133.3333333333%;
+  letter-spacing: 4px;
+  color: #fff;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;

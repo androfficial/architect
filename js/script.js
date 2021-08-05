@@ -15,6 +15,7 @@ document.addEventListener('click', (e) => {
 });
 const moveUpBtn = document.getElementById('moveUp');
 const moveDownBtn = document.getElementById('moveDown');
+const sectionNumber = document.querySelector('.section-number__num');
 
 new fullpage('#page', {
    autoScrolling: true,
@@ -23,16 +24,10 @@ new fullpage('#page', {
    menu: '#scrollbar',
    anchors: ['intro', 'about', 'services', 'projects', 'holiday', 'team', 'testimonials', 'contacts'],
    // onLeave: function(origin, destination, direction){
-	// 	var leavingSection = this;
-
-	// 	//после покидания раздела 2
-	// 	if(origin.index == 1 && direction =='down'){
-	// 		alert("Going to section 3!");
-	// 	}
-
-	// 	else if(origin.index == 1 && direction == 'up'){
-	// 		alert("Going to section 1!");
-	// 	}
+   //    //var leavingSection = this;
+   //    console.log(destination);
+   //    let numberOfSection = destination.item.dataset.number;
+   //    sectionNumber.innerHTML = numberOfSection;
 	// }
 });
 
