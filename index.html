@@ -21,12 +21,12 @@
 			</div>
 			<div class="header__menu menu">
 				<nav class="menu__body">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<a href="#" class="menu__link">Home</a>
+					<ul class="menu__list" id="menu-list">
+						<li class="menu__item" data-menuanchor="intro">
+							<a href="#intro" class="menu__link">Home</a>
 						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">About us</a>
+						<li class="menu__item" data-menuanchor="about">
+							<a href="#about" class="menu__link">About us</a>
 						</li>
 						<li class="menu__item">
 							<a href="#" class="menu__link menu__link--services">SERVICES</a>
@@ -47,11 +47,11 @@
 								</li>
 							</ul>
 						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">PROJECTS</a>
+						<li class="menu__item" data-menuanchor="projects">
+							<a href="#projects" class="menu__link">PROJECTS</a>
 						</li>
-						<li class="menu__item">
-							<a href="#" class="menu__link">CONTACT</a>
+						<li class="menu__item" data-menuanchor="contacts">
+							<a href="#contacts" class="menu__link">CONTACT</a>
 						</li>
 					</ul>
 				</nav>
@@ -491,7 +491,7 @@
 			</div>
 		</section>
 	</main>
-	<div class="pagination">
+	<div class="pagination" id="pagination">
 		<div class="pagination__inner">
 			<div class="pagination__arrows arrows-nav">
 				<button class="arrows-nav__arrow" type="button" id="moveUp">
@@ -522,58 +522,6 @@
 				</li>
 			</ul>
 		</div>
-	</div>
-	<div class="scrollbar" id="scrollbar">
-		<ul class="scrollbar__list">
-			<li class="scrollbar__item" data-menuanchor="intro">
-				<a href="#intro" class="scrollbar__link">
-					<span class="scrollbar__point"></span>
-				</a>
-				<span class="scrollbar__section-num">01</span>
-			</li>
-			<li class="scrollbar__item" data-menuanchor="about">
-				<a href="#about" class="scrollbar__link">
-					<span class="scrollbar__point"></span>
-				</a>
-				<span class="scrollbar__section-num">02</span>
-			</li>
-			<li class="scrollbar__item" data-menuanchor="services">
-				<a href="#services" class="scrollbar__link">
-					<span class="scrollbar__point"></span>
-				</a>
-				<span class="scrollbar__section-num">03</span>
-			</li>
-			<li class="scrollbar__item" data-menuanchor="projects">
-				<a href="#projects" class="scrollbar__link">
-					<span class="scrollbar__point"></span>
-				</a>
-				<span class="scrollbar__section-num">04</span>
-			</li>
-			<li class="scrollbar__item" data-menuanchor="holiday">
-				<a href="#holiday" class="scrollbar__link">
-					<span class="scrollbar__point"></span>
-				</a>
-				<span class="scrollbar__section-num">05</span>
-			</li>
-			<li class="scrollbar__item" data-menuanchor="team">
-				<a href="#team" class="scrollbar__link">
-					<span class="scrollbar__point"></span>
-				</a>
-				<span class="scrollbar__section-num">06</span>
-			</li>
-			<li class="scrollbar__item" data-menuanchor="testimonials">
-				<a href="#testimonials" class="scrollbar__link">
-					<span class="scrollbar__point"></span>
-				</a>
-				<span class="scrollbar__section-num">07</span>
-			</li>
-			<li class="scrollbar__item" data-menuanchor="contacts">
-				<a href="#contacts" class="scrollbar__link">
-					<span class="scrollbar__point"></span>
-				</a>
-				<span class="scrollbar__section-num">08</span>
-			</li>
-		</ul>
 	</div>
 </div>
 

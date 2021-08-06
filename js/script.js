@@ -6,6 +6,73 @@ let isMobile = {
    Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
    any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
 };
+document.querySelector('.menu__link--services').addEventListener('click', (e) => {
+   e.preventDefault();
+});
+
+// const links = document.querySelectorAll('.menu__link');
+
+// if (links) {
+//    for (let link of links) {
+//       if (link.classList.contains('menu__link--services')) {
+//          link.addEventListener('click', (e) => {
+//             e.preventDefault();
+//          });
+//       } else {
+//          link.addEventListener('click', (e) => {
+//             if (document.querySelector('.menu__link._active')) {
+//                document.querySelector('.menu__link._active').classList.remove('_active');
+//             }
+//             link.classList.add('_active');
+//          });
+//       }
+//    }
+// }
+
+// const links = document.querySelectorAll('.menu__link');
+
+// for (let link of links) {
+//   link.addEventListener('click', (e) => {
+//       e.preventDefault();
+
+//       let href = link.getAttribute('href').substring(1);
+//       console.log(`Получаем название секции по ее ID: ${href}`);
+
+//       const scrollTarget = document.getElementById(href);
+//       console.log(`Находим элемент к которому нужно скроллить по ID: ${scrollTarget}`);
+
+//       const topOffset = document.querySelector('.header').offsetHeight;
+//       console.log(`Получаем высоту фиксированной шапки: ${topOffset}`);
+
+//       // const topOffset = 0; // если не нужен отступ сверху 
+//       const elementPosition = scrollTarget.getBoundingClientRect().top;
+//       console.log(`Получаем Позицию от верха полученой секции по ID: ${elementPosition}`);
+
+//       const offsetPosition = elementPosition - topOffset;
+//       console.log(`Получаем Позицию от верха полученой секции по ID с вычетом высоты шапки: ${offsetPosition}`);
+
+//       window.scrollBy({
+//         top: offsetPosition,
+//         behavior: 'smooth'
+//     });
+//   });
+// }
+
+// const anchors = document.querySelectorAll('.menu__link');
+
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault();
+    
+//     const blockID = anchor.getAttribute('href');
+//     document.querySelector(blockID).scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     })
+//   })
+// }
+
+//Работает без учета фиксированной шапки
 document.addEventListener('click', (e) => {
    if (!e.target.closest('.info-header__column')) {
       for (let infoHeaderColumn of document.querySelectorAll('.info-header__column')) {
@@ -15,12 +82,14 @@ document.addEventListener('click', (e) => {
 });
 const moveUpBtn = document.getElementById('moveUp');
 const moveDownBtn = document.getElementById('moveDown');
+//const sectionNumber = document.querySelector('.section-number__num');
 
 new fullpage('#page', {
    autoScrolling: true,
    scrollHorizontally: true,
-   // navigation: true,
-   menu: '#scrollbar',
+   scrollingSpeed: 800,
+   navigation: true,
+   menu: '#menu-list',
    anchors: ['intro', 'about', 'services', 'projects', 'holiday', 'team', 'testimonials', 'contacts'],
    // onLeave: function(origin, destination, direction){
    //    //var leavingSection = this;
