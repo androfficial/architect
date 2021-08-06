@@ -628,7 +628,7 @@ section {
 .menu__link::after {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 50%;
   background-color: #fff;
   height: 1px;
