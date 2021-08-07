@@ -39,9 +39,9 @@ burger.addEventListener('click', (e) => {
    body.classList.toggle('_lock');
    burger.classList.toggle('_active');
    if (burger.classList.contains('_active')) {
-      fullpage_api.setAllowScrolling(false);
+      fullpage_api.setAllowScrolling(false, 'down');
    } else {
-      fullpage_api.setAllowScrolling(true);
+      fullpage_api.setAllowScrolling(true, 'down');
    }
    menu.classList.toggle('_active');
 });
