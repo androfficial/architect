@@ -6,6 +6,15 @@ let isMobile = {
    Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
    any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
 };
+const body   = document.querySelector('body');
+const burger = document.querySelector('.header__icon');
+const menu   = document.querySelector('.menu__body');
+
+burger.addEventListener('click', () => {
+   body.classList.toggle('_lock');
+   burger.classList.toggle('_active');
+   menu.classList.toggle('_active');
+});
 document.querySelector('.menu__link--services').addEventListener('click', (e) => {
    e.preventDefault();
 });
@@ -82,7 +91,6 @@ document.addEventListener('click', (e) => {
 });
 const moveUpBtn = document.getElementById('moveUp');
 const moveDownBtn = document.getElementById('moveDown');
-//const sectionNumber = document.querySelector('.section-number__num');
 
 new fullpage('#page', {
    autoScrolling: true,
@@ -91,12 +99,6 @@ new fullpage('#page', {
    navigation: true,
    menu: '#menu-list',
    anchors: ['intro', 'about', 'services', 'projects', 'holiday', 'team', 'testimonials', 'contacts'],
-   // onLeave: function(origin, destination, direction){
-   //    //var leavingSection = this;
-   //    console.log(destination);
-   //    let numberOfSection = destination.item.dataset.number;
-   //    sectionNumber.innerHTML = numberOfSection;
-	// }
 });
 
 moveUpBtn.addEventListener('click', (e) => {
@@ -105,7 +107,43 @@ moveUpBtn.addEventListener('click', (e) => {
 moveDownBtn.addEventListener('click', (e) => {
    fullpage_api.moveSectionDown();
 });
+const menuList   = document.querySelector('.menu__list');
 const infoHeader = document.querySelector('.info-header');
+
+if (isMobile.any()) {
+   if (menuList) {
+      menuList.addEventListener('click', (e) => {
+         if (e.target.classList.contains('menu__link') || e.target.classList.contains('menu__arrow')) {
+            let lastElement  = e.target.parentElement.lastElementChild;
+            let subMenu      = e.target.parentElement.lastElementChild.previousElementSibling;
+
+            subMenu.classList.toggle('_show');
+
+            if (!lastElement.classList.contains('_show')) {
+               lastElement.classList.add('_show');
+               lastElement.style.height = 'auto';
+
+               const height = lastElement.clientHeight + 'px';
+
+               lastElement.style.height = '0px';
+
+               setTimeout(() => {
+                  lastElement.style.height = height;
+               }, 0);
+            } else {
+               lastElement.style.height = '0px';
+            
+               lastElement.addEventListener('transitionend', (e) => {
+                  lastElement.classList.remove('_show');
+               }, {
+                  once: true
+               });
+            }
+
+         }
+      });
+   }
+}
 
 if (infoHeader) {
    infoHeader.addEventListener('click', (e) => {
