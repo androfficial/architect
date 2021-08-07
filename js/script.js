@@ -118,7 +118,7 @@ const infoHeader = document.querySelector('.info-header');
 if (isMobile.any()) {
    if (menuList) {
       menuList.addEventListener('click', (e) => {
-         if (e.target.classList.contains('menu__link') || e.target.classList.contains('menu__arrow')) {
+         if (e.target.classList.contains('menu__link--services') || e.target.classList.contains('menu__arrow')) {
             let lastElement  = e.target.parentElement.lastElementChild;
             let subMenu      = e.target.parentElement.lastElementChild.previousElementSibling;
 
@@ -144,7 +144,11 @@ if (isMobile.any()) {
                   once: true
                });
             }
-
+         } else {
+            body.classList.remove('_lock');
+            menu.classList.remove('_active');
+            burger.classList.remove('_active');
+            fullpage_api.setAllowScrolling(true, 'down');
          }
       });
    }
