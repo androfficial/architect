@@ -6,13 +6,43 @@ let isMobile = {
    Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
    any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
 };
+const moveUpBtn = document.getElementById('moveUp');
+const moveDownBtn = document.getElementById('moveDown');
+
+new fullpage('#page', {
+   autoScrolling: true,
+   scrollHorizontally: true,
+   scrollingSpeed: 800,
+   navigation: true,
+   menu: '#menu-list',
+   anchors: ['intro', 'about', 'services', 'projects', 'holiday', 'team', 'testimonials', 'contacts'],
+});
+
+moveUpBtn.addEventListener('click', (e) => {
+   fullpage_api.moveSectionUp();
+});
+moveDownBtn.addEventListener('click', (e) => {
+   fullpage_api.moveSectionDown();
+});
+document.addEventListener('click', (e) => {
+   if (!e.target.closest('.info-header__column')) {
+      for (let infoHeaderColumn of document.querySelectorAll('.info-header__column')) {
+         infoHeaderColumn.classList.remove('_show');
+      }
+   }
+});
 const body   = document.querySelector('body');
 const burger = document.querySelector('.header__icon');
 const menu   = document.querySelector('.menu__body');
 
-burger.addEventListener('click', () => {
+burger.addEventListener('click', (e) => {
    body.classList.toggle('_lock');
    burger.classList.toggle('_active');
+   if (burger.classList.contains('_active')) {
+      fullpage_api.setAllowScrolling(false);
+   } else {
+      fullpage_api.setAllowScrolling(true);
+   }
    menu.classList.toggle('_active');
 });
 document.querySelector('.menu__link--services').addEventListener('click', (e) => {
@@ -82,31 +112,6 @@ document.querySelector('.menu__link--services').addEventListener('click', (e) =>
 // }
 
 //Работает без учета фиксированной шапки
-document.addEventListener('click', (e) => {
-   if (!e.target.closest('.info-header__column')) {
-      for (let infoHeaderColumn of document.querySelectorAll('.info-header__column')) {
-         infoHeaderColumn.classList.remove('_show');
-      }
-   }
-});
-const moveUpBtn = document.getElementById('moveUp');
-const moveDownBtn = document.getElementById('moveDown');
-
-new fullpage('#page', {
-   autoScrolling: true,
-   scrollHorizontally: true,
-   scrollingSpeed: 800,
-   navigation: true,
-   menu: '#menu-list',
-   anchors: ['intro', 'about', 'services', 'projects', 'holiday', 'team', 'testimonials', 'contacts'],
-});
-
-moveUpBtn.addEventListener('click', (e) => {
-   fullpage_api.moveSectionUp();
-});
-moveDownBtn.addEventListener('click', (e) => {
-   fullpage_api.moveSectionDown();
-});
 const menuList   = document.querySelector('.menu__list');
 const infoHeader = document.querySelector('.info-header');
 
