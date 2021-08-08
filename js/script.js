@@ -15,7 +15,9 @@ new fullpage('#page', {
    scrollingSpeed: 800,
    navigation: true,
    menu: '#menu-list',
+   scrollOverflow: true,
    anchors: ['intro', 'about', 'services', 'projects', 'holiday', 'team', 'testimonials', 'contacts'],
+   // normalScrollElements: '#map',
 });
 
 moveUpBtn.addEventListener('click', (e) => {
@@ -174,9 +176,12 @@ if (infoHeader) {
 }
 new Swiper('.projects__items', {
 	// Optional parameters
+	observer: true,
+	observeParents: true,
 	loop: false,
 	slidesPerView: 3,
 	spaceBetween: 20,
+	watchOverflow: true,
  
 	// Navigation arrows
 	navigation: {
@@ -188,6 +193,8 @@ new Swiper('.projects__items', {
 
 new Swiper('.holiday__items', {
 	// Optional parameters
+	observer: true,
+	observeParents: true,
 	loop: false,
 	slidesPerView: 1,
  
