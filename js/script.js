@@ -182,6 +182,20 @@ new Swiper('.projects__items', {
 	slidesPerView: 3,
 	spaceBetween: 20,
 	watchOverflow: true,
+	breakpoints: {
+		320: {
+		  slidesPerView: 1,
+		  spaceBetween: 20
+		},
+		600: {
+		  slidesPerView: 2,
+		  spaceBetween: 20
+		},
+		992: {
+		  slidesPerView: 3,
+		  spaceBetween: 20
+		}
+	},
  
 	// Navigation arrows
 	navigation: {

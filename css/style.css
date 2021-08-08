@@ -1141,6 +1141,7 @@ section::after {
 }
 
 .projects__container {
+  min-height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -1177,6 +1178,11 @@ section::after {
 
 .projects__items {
   width: 100%;
+}
+
+.projects__items.swiper-container {
+  margin-left: initial;
+  margin-right: initial;
 }
 
 .projects__picture img {
@@ -1254,12 +1260,29 @@ section::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .projects .slider-arrow ._icon {
   fill: #fff;
   width: 22px;
   height: 22px;
+  -webkit-transition: fill 0.3s ease 0s;
+  -o-transition: fill 0.3s ease 0s;
+  transition: fill 0.3s ease 0s;
+}
+
+.projects .slider-arrow.swiper-button-disabled {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.projects .section-inside-wrapper {
+  height: 100%;
+  display: block;
 }
 
 .item-projects__picture {
@@ -1320,6 +1343,7 @@ section::after {
 }
 
 .holiday__container {
+  min-height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -1356,6 +1380,11 @@ section::after {
 
 .holiday__items {
   width: 100%;
+}
+
+.holiday__items.swiper-container {
+  margin-left: initial;
+  margin-right: initial;
 }
 
 .holiday .paginations-slider {
@@ -1400,12 +1429,24 @@ section::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .holiday .slider-arrow ._icon {
   fill: #fff;
   width: 22px;
   height: 22px;
+  -webkit-transition: fill 0.3s ease 0s;
+  -o-transition: fill 0.3s ease 0s;
+  transition: fill 0.3s ease 0s;
+}
+
+.holiday .slider-arrow.swiper-button-disabled {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .holiday__picture img {
@@ -1441,10 +1482,16 @@ section::after {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.holiday .section-inside-wrapper {
+  height: 100%;
+  display: block;
+}
+
 .item-holiday__picture {
   display: block;
   overflow: hidden;
   padding: 0px 0px 42.735042735% 0px;
+  min-height: 392px;
   position: relative;
 }
 
@@ -2052,6 +2099,14 @@ section::after {
     left: 0;
   }
 
+  .projects .slider-arrow:hover ._icon {
+    fill: aqua;
+  }
+
+  .holiday .slider-arrow:hover ._icon {
+    fill: aqua;
+  }
+
   .contacts__btn:hover {
     background-color: rgba(255, 255, 255, 0.3);
   }
@@ -2206,6 +2261,43 @@ section::after {
 
   .item-services__title {
     font-size: calc(16px + 2 * ((100vw - 320px) / 880));
+  }
+
+  .projects .slider-arrow {
+    width: calc(25px + 10 * ((100vw - 320px) / 880));
+  }
+
+  .projects .slider-arrow {
+    height: calc(45px + 10 * ((100vw - 320px) / 880));
+  }
+
+  .projects .slider-arrow ._icon {
+    width: calc(18px + 4 * ((100vw - 320px) / 880));
+  }
+
+  .projects .slider-arrow ._icon {
+    height: calc(18px + 4 * ((100vw - 320px) / 880));
+  }
+
+  .holiday__items {
+    left: -15px;
+    width: calc(100% + 30px);
+  }
+
+  .holiday .slider-arrow {
+    width: calc(25px + 10 * ((100vw - 320px) / 880));
+  }
+
+  .holiday .slider-arrow {
+    height: calc(45px + 10 * ((100vw - 320px) / 880));
+  }
+
+  .holiday .slider-arrow ._icon {
+    width: calc(18px + 4 * ((100vw - 320px) / 880));
+  }
+
+  .holiday .slider-arrow ._icon {
+    height: calc(18px + 4 * ((100vw - 320px) / 880));
   }
 
   .team::before {
@@ -2499,6 +2591,14 @@ section::after {
     margin: 15px 0px 0px 0px;
   }
 
+  .item-projects__body {
+    margin: 15px 0px 0px 0px;
+  }
+
+  .item-holiday__body {
+    margin: 15px 0px 0px 0px;
+  }
+
   .item-team__body {
     margin: 15px 0px 0px 0px;
   }
@@ -2531,9 +2631,29 @@ section::after {
     gap: 20px 0px;
   }
 
+  .projects__items {
+    left: -15px;
+    width: calc(100% + 30px);
+  }
+
+  .item-projects__body {
+    padding: 0 15px;
+  }
+
+  .item-holiday__body {
+    padding: 0 15px;
+  }
+
   .team__items {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
+    position: relative;
+    left: -15px;
+    width: calc(100% + 30px);
+  }
+
+  .item-team__body {
+    padding: 0 15px;
   }
 
   .testimonials__items {
