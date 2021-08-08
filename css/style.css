@@ -235,6 +235,11 @@ section {
   position: relative;
 }
 
+section::before,
+section::after {
+  pointer-events: none;
+}
+
 .section-inside-wrapper {
   min-height: 100vh;
   display: -webkit-box;
