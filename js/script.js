@@ -204,8 +204,6 @@ if (window.innerWidth > 769) {
    moveDownBtn.addEventListener('click', (e) => {
       fullpage_api.moveSectionDown();
    });
-} else {
-   
 }
 
 // new fullpage('#page', {
@@ -317,27 +315,27 @@ if (isMobile.any()) {
    if (menuList) {
       menuList.addEventListener('click', (e) => {
          if (e.target.classList.contains('menu__link--services') || e.target.classList.contains('menu__arrow')) {
-            let lastElement  = e.target.parentElement.lastElementChild;
-            let subMenu      = e.target.parentElement.lastElementChild.previousElementSibling;
+            let subMenu = e.target.parentElement.lastElementChild;
+            let arrow   = e.target.parentElement.lastElementChild.previousElementSibling;
 
-            subMenu.classList.toggle('_show');
+            arrow.classList.toggle('_show');
 
-            if (!lastElement.classList.contains('_show')) {
-               lastElement.classList.add('_show');
-               lastElement.style.height = 'auto';
+            if (!subMenu.classList.contains('_show')) {
+               subMenu.classList.add('_show');
+               subMenu.style.height = 'auto';
 
-               const height = lastElement.clientHeight + 'px';
+               const height = subMenu.clientHeight + 'px';
 
-               lastElement.style.height = '0px';
+               subMenu.style.height = '0px';
 
                setTimeout(() => {
-                  lastElement.style.height = height;
+                  subMenu.style.height = height;
                }, 0);
             } else {
-               lastElement.style.height = '0px';
+               subMenu.style.height = '0px';
             
-               lastElement.addEventListener('transitionend', (e) => {
-                  lastElement.classList.remove('_show');
+               subMenu.addEventListener('transitionend', (e) => {
+                  subMenu.classList.remove('_show');
                }, {
                   once: true
                });
