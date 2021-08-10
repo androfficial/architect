@@ -207,28 +207,30 @@ if (window.innerWidth > 769) {
    const linkNav = document.querySelectorAll('.menu__link');
          
    for (let link of linkNav) {
-      link.addEventListener('click', (e) => {
-         e.preventDefault();
-
-         const cutHref = link.getAttribute('href').substring(4);
-         const fullHref = cutHref[0].toLowerCase() + cutHref.slice(1);
-
-         const scrollTarget = document.getElementById(fullHref);
-         const headerOffset = 60;
-         const elementPosition = scrollTarget.getBoundingClientRect().top;
-         const offsetPosition = elementPosition - headerOffset;
-
-         // console.log(href);
-         // console.log(scrollTarget);
-         // console.log(elementPosition);
-         // console.log(offsetPosition);
-
-         window.scrollBy({
-            top: offsetPosition,
-            behavior: "smooth"
+      if (!link.classList.contains('menu__link--services')) {
+         link.addEventListener('click', (e) => {
+            e.preventDefault();
+   
+            const cutHref = link.getAttribute('href').substring(4);
+            const fullHref = cutHref[0].toLowerCase() + cutHref.slice(1);
+   
+            const scrollTarget = document.getElementById(fullHref);
+            const headerOffset = 60;
+            const elementPosition = scrollTarget.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - headerOffset;
+   
+            // console.log(href);
+            // console.log(scrollTarget);
+            // console.log(elementPosition);
+            // console.log(offsetPosition);
+   
+            window.scrollBy({
+               top: offsetPosition,
+               behavior: "smooth"
+            });
+   
          });
-
-      });
+      }
    }
 }    
 
@@ -267,11 +269,9 @@ burger.addEventListener('click', (e) => {
    burger.classList.toggle('_active');
    menu.classList.toggle('_active');
 });
-if (window.innerWidth > 769) {
-   document.querySelector('.menu__link--services').addEventListener('click', (e) => {
-      e.preventDefault();
-   });
-}
+document.querySelector('.menu__link--services').addEventListener('click', (e) => {
+   e.preventDefault();
+});
 
 const menuList   = document.querySelector('.menu__list');
 const infoHeader = document.querySelector('.info-header');
