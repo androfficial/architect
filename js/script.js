@@ -8,7 +8,6 @@ let isMobile = {
 };
 if (window.innerWidth < 769) {
 	function checkScroll() {
-		console.log('Работает');
 		const header = document.querySelector('.header');
 	
 		if (window.pageYOffset > 60) {
@@ -192,7 +191,7 @@ if (window.innerWidth > 769) {
       navigation: true,
       menu: '#menu-list',
       scrollOverflow: true,
-      anchors: ['intro', 'about', 'services', 'projects', 'holiday', 'testimonials', 'contacts'],
+      anchors: ['secIntro', 'secAbout', 'secServices', 'secProjects', 'secHoliday', 'secTestimonials', 'secContacts'],
       // normalScrollElements: '#map',
       // responsiveWidth: 769,
       // responsiveHeight: 626
@@ -204,7 +203,34 @@ if (window.innerWidth > 769) {
    moveDownBtn.addEventListener('click', (e) => {
       fullpage_api.moveSectionDown();
    });
-}
+} else {
+   const linkNav = document.querySelectorAll('.menu__link');
+         
+   for (let link of linkNav) {
+      link.addEventListener('click', (e) => {
+         e.preventDefault();
+
+         const cutHref = link.getAttribute('href').substring(4);
+         const fullHref = cutHref[0].toLowerCase() + cutHref.slice(1);
+
+         const scrollTarget = document.getElementById(fullHref);
+         const headerOffset = 60;
+         const elementPosition = scrollTarget.getBoundingClientRect().top;
+         const offsetPosition = elementPosition - headerOffset;
+
+         // console.log(href);
+         // console.log(scrollTarget);
+         // console.log(elementPosition);
+         // console.log(offsetPosition);
+
+         window.scrollBy({
+            top: offsetPosition,
+            behavior: "smooth"
+         });
+
+      });
+   }
+}    
 
 // new fullpage('#page', {
 //    autoScrolling: true,
@@ -241,112 +267,49 @@ burger.addEventListener('click', (e) => {
    burger.classList.toggle('_active');
    menu.classList.toggle('_active');
 });
-document.querySelector('.menu__link--services').addEventListener('click', (e) => {
-   e.preventDefault();
-});
+if (window.innerWidth > 769) {
+   document.querySelector('.menu__link--services').addEventListener('click', (e) => {
+      e.preventDefault();
+   });
+}
 
-// const links = document.querySelectorAll('.menu__link');
-
-// if (links) {
-//    for (let link of links) {
-//       if (link.classList.contains('menu__link--services')) {
-//          link.addEventListener('click', (e) => {
-//             e.preventDefault();
-//          });
-//       } else {
-//          link.addEventListener('click', (e) => {
-//             if (document.querySelector('.menu__link._active')) {
-//                document.querySelector('.menu__link._active').classList.remove('_active');
-//             }
-//             link.classList.add('_active');
-//          });
-//       }
-//    }
-// }
-
-// const links = document.querySelectorAll('.menu__link');
-
-// for (let link of links) {
-//   link.addEventListener('click', (e) => {
-//       e.preventDefault();
-
-//       let href = link.getAttribute('href').substring(1);
-//       console.log(`Получаем название секции по ее ID: ${href}`);
-
-//       const scrollTarget = document.getElementById(href);
-//       console.log(`Находим элемент к которому нужно скроллить по ID: ${scrollTarget}`);
-
-//       const topOffset = document.querySelector('.header').offsetHeight;
-//       console.log(`Получаем высоту фиксированной шапки: ${topOffset}`);
-
-//       // const topOffset = 0; // если не нужен отступ сверху 
-//       const elementPosition = scrollTarget.getBoundingClientRect().top;
-//       console.log(`Получаем Позицию от верха полученой секции по ID: ${elementPosition}`);
-
-//       const offsetPosition = elementPosition - topOffset;
-//       console.log(`Получаем Позицию от верха полученой секции по ID с вычетом высоты шапки: ${offsetPosition}`);
-
-//       window.scrollBy({
-//         top: offsetPosition,
-//         behavior: 'smooth'
-//     });
-//   });
-// }
-
-// const anchors = document.querySelectorAll('.menu__link');
-
-// for (let anchor of anchors) {
-//   anchor.addEventListener('click', function (e) {
-//     e.preventDefault();
-    
-//     const blockID = anchor.getAttribute('href');
-//     document.querySelector(blockID).scrollIntoView({
-//       behavior: 'smooth',
-//       block: 'start'
-//     })
-//   })
-// }
-
-//Работает без учета фиксированной шапки
 const menuList   = document.querySelector('.menu__list');
 const infoHeader = document.querySelector('.info-header');
 
 if (isMobile.any()) {
-   if (menuList) {
-      menuList.addEventListener('click', (e) => {
-         if (e.target.classList.contains('menu__link--services') || e.target.classList.contains('menu__arrow')) {
-            let subMenu = e.target.parentElement.lastElementChild;
-            let arrow   = e.target.parentElement.lastElementChild.previousElementSibling;
+   menuList.addEventListener('click', (e) => {
+      if (e.target.classList.contains('menu__link--services') || e.target.classList.contains('menu__arrow')) {
+         let subMenu = e.target.parentElement.lastElementChild;
+         let arrow   = e.target.parentElement.lastElementChild.previousElementSibling;
 
-            arrow.classList.toggle('_show');
+         arrow.classList.toggle('_show');
 
-            if (!subMenu.classList.contains('_show')) {
-               subMenu.classList.add('_show');
-               subMenu.style.height = 'auto';
+         if (!subMenu.classList.contains('_show')) {
+            subMenu.classList.add('_show');
+            subMenu.style.height = 'auto';
 
-               const height = subMenu.clientHeight + 'px';
+            const height = subMenu.clientHeight + 'px';
 
-               subMenu.style.height = '0px';
+            subMenu.style.height = '0px';
 
-               setTimeout(() => {
-                  subMenu.style.height = height;
-               }, 0);
-            } else {
-               subMenu.style.height = '0px';
-            
-               subMenu.addEventListener('transitionend', (e) => {
-                  subMenu.classList.remove('_show');
-               }, {
-                  once: true
-               });
-            }
+            setTimeout(() => {
+               subMenu.style.height = height;
+            }, 0);
          } else {
-            body.classList.remove('_lock');
-            menu.classList.remove('_active');
-            burger.classList.remove('_active');
+            subMenu.style.height = '0px';
+         
+            subMenu.addEventListener('transitionend', (e) => {
+               subMenu.classList.remove('_show');
+            }, {
+               once: true
+            });
          }
-      });
-   }
+      } else {
+         body.classList.remove('_lock');
+         menu.classList.remove('_active');
+         burger.classList.remove('_active');
+      } 
+   });
 }
 
 if (infoHeader) {

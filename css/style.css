@@ -1892,7 +1892,7 @@ section::after {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   ._adapt-container {
     max-width: 1250px;
     padding: 0 40px;
@@ -1900,11 +1900,6 @@ section::after {
 }
 
 @media (min-width: 992px) {
-  ._adapt-container {
-    max-width: 1370px;
-    padding: 0 100px;
-  }
-
   .btn:hover {
     background-color: rgba(255, 255, 255, 0.15);
   }
@@ -1998,6 +1993,11 @@ section::after {
 }
 
 @media (min-width: 993px) {
+  ._adapt-container {
+    max-width: 1370px;
+    padding: 0 100px;
+  }
+
   .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2581,6 +2581,10 @@ section::after {
 
   .holiday::after {
     display: none;
+  }
+
+  .contacts .section-inside-wrapper {
+    padding: 30px 0px 15px !important;
   }
 
   .form {
