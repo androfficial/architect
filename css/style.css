@@ -2503,7 +2503,13 @@ section::after {
     margin: 15px 0px 0px 0px;
   }
 
+  .holiday__items {
+    left: -15px;
+    width: calc(100% + 30px);
+  }
+
   .item-holiday__body {
+    padding: 0 15px;
     margin: 15px 0px 0px 0px;
   }
 
@@ -2541,6 +2547,11 @@ section::after {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     gap: 20px 0px;
+  }
+
+  .projects__items {
+    left: -15px;
+    width: calc(100% + 30px);
   }
 
   .item-projects__body {
