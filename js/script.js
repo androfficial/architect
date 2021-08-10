@@ -340,10 +340,11 @@ new Swiper('.projects__items', {
 	watchOverflow: true,
 	speed: 900,
 	preloadImages: false,
-	lazy: {
-		loadOnTransitionStart: true,
-		loadPrevNext: false,
-	},
+	lazy: true,
+	// lazy: {
+	// 	loadOnTransitionStart: true,
+	// 	loadPrevNext: false,
+	// },
 	watchSlidesProgress: true,
 	watchSlidesVisibility: true,
 	breakpoints: {
