@@ -339,6 +339,13 @@ new Swiper('.projects__items', {
 	spaceBetween: 20,
 	watchOverflow: true,
 	speed: 900,
+	preloadImages: false,
+	lazy: {
+		loadOnTransitionStart: true,
+		loadPrevNext: false,
+	},
+	watchSlidesProgress: true,
+	watchSlidesVisibility: true,
 	breakpoints: {
 		320: {  
 			effect: 'fade',
