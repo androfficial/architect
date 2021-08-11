@@ -2013,10 +2013,10 @@ section::after {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.6);
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+  transition: all 0.9s ease 0s;
 }
 
 .services-full__picture img {
