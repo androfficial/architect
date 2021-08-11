@@ -432,6 +432,9 @@ section::after {
   fill: #fff;
   width: 25px;
   height: 22px;
+  -webkit-transition: fill 0.3s ease 0s;
+  -o-transition: fill 0.3s ease 0s;
+  transition: fill 0.3s ease 0s;
 }
 
 .social-list {
@@ -1902,6 +1905,10 @@ section::after {
 @media (min-width: 992px) {
   .btn:hover {
     background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .arrows-nav__arrow ._icon:hover {
+    fill: brown;
   }
 
   .social-list__link ._icon:hover {
