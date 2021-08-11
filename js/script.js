@@ -381,7 +381,13 @@ new Swiper('.holiday__items', {
 	loop: false,
 	slidesPerView: 1,
 	watchOverflow: true,
-	speed: 900,
+	speed: 700,
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true
+	},
+	preloadImages: false,
+	lazy: true,
  
 	// Navigation arrows
 	navigation: {
