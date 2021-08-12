@@ -1328,6 +1328,11 @@ section::after {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.9s ease 0s;
+  transition: -webkit-transform 0.9s ease 0s;
+  -o-transition: transform 0.9s ease 0s;
+  transition: transform 0.9s ease 0s;
+  transition: transform 0.9s ease 0s, -webkit-transform 0.9s ease 0s;
 }
 
 .item-projects__body {
@@ -1526,6 +1531,11 @@ section::after {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.9s ease 0s;
+  transition: -webkit-transform 0.9s ease 0s;
+  -o-transition: transform 0.9s ease 0s;
+  transition: transform 0.9s ease 0s;
+  transition: transform 0.9s ease 0s, -webkit-transform 0.9s ease 0s;
 }
 
 .item-holiday__body {
@@ -2135,8 +2145,20 @@ section::after {
     fill: aqua;
   }
 
+  .item-projects__picture:hover img {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
   .holiday .slider-arrow:hover ._icon {
     fill: aqua;
+  }
+
+  .item-holiday__picture:hover img {
+    -webkit-transform: scale(1.04);
+        -ms-transform: scale(1.04);
+            transform: scale(1.04);
   }
 
   .contacts__btn:hover {
