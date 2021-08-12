@@ -2003,22 +2003,6 @@ section::after {
   grid-row: 4/6;
 }
 
-.services-full__item::before {
-  content: "";
-  opacity: 1;
-  visibility: visible;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.9s ease 0s;
-  -o-transition: all 0.9s ease 0s;
-  transition: all 0.9s ease 0s;
-}
-
 .services-full__picture img {
   position: absolute;
   top: 0;
@@ -2173,11 +2157,6 @@ section::after {
     -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
             transform: scale(1.05);
-  }
-
-  .services-full__item:hover::before {
-    opacity: 0;
-    visibility: hidden;
   }
 }
 
