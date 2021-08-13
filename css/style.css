@@ -2324,6 +2324,10 @@ section::after {
   gap: 10px;
 }
 
+.reverse__input._error {
+  border-color: red;
+}
+
 .reverse__picture img {
   position: absolute;
   top: 0;

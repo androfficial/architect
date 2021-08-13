@@ -231,18 +231,24 @@ document.addEventListener('click', (e) => {
       }
    }
 });
-const form = document.getElementById('form');
+const forms = document.querySelectorAll('[data-form="form"]');
 
-form.addEventListener('submit', (e) => {
-   e.preventDefault();
+if (forms) {
+   for (let form of forms) {
+      form.addEventListener('click', (e) => {
+         if (e.target.tagName === 'BUTTON' && e.target.hasAttribute('type', 'submit')) {
+            e.preventDefault();
    
-   let error = checkValueInput(form);
-   if (error === 0) {
-      console.log('Все поля успешно заполнены.');
-   } else {
-      console.log('Пожалуйста, заполните поля.');
+            let error = checkValueInput(form);
+            if (error === 0) {
+               console.log('Все поля успешно заполнены.');
+            } else {
+               console.log('Пожалуйста, заполните поля.');
+            }
+         }
+      });
    }
-});
+}
 
 const checkValueInput = (form) => { 
    let error = 0;
