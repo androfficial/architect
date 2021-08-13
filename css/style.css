@@ -244,6 +244,17 @@ body:not(.enable-fullpage) .social-list {
   margin: 30px 0px 0px 0px;
 }
 
+body:not(.enable-fullpage) .services {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+body:not(.enable-fullpage) .services .section-inside-wrapper {
+  padding: 0 !important;
+  min-height: auto;
+  display: block;
+}
+
 .footer {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -369,7 +380,8 @@ section::after {
   border: 2px solid #fff;
   color: #fff;
   height: 60px;
-  padding: 0 25px;
+  padding-right: 25px;
+  padding-left: 25px;
   background-color: transparent;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -2182,42 +2194,13 @@ section::after {
 }
 
 .data {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
 .data__container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
-  z-index: 5;
-}
-
-.data__content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  z-index: 10;
 }
 
 .data__picture img {
@@ -2288,44 +2271,20 @@ section::after {
 }
 
 .content-data__benefit ._icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 12px;
+          flex: 0 0 12px;
   margin: 0px 6px 0px 0px;
 }
 
 .reverse {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .reverse__container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
-  z-index: 5;
-}
-
-.reverse__content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  z-index: 10;
 }
 
 .reverse__inner {
@@ -2345,7 +2304,7 @@ section::after {
 }
 
 .reverse__title:not(:last-child) {
-  margin: 0px 0px 15px 0px;
+  margin-bottom: 15px;
 }
 
 .reverse__subtitle {
@@ -2588,12 +2547,28 @@ section::after {
 }
 
 @media (max-width: 1200px) {
+  body:not(.enable-fullpage) .services {
+    padding-top: calc(30px + 90 * ((100vw - 320px) / 880));
+  }
+
+  body:not(.enable-fullpage) .services {
+    padding-bottom: calc(30px + 90 * ((100vw - 320px) / 880));
+  }
+
   .btn {
     height: calc(50px + 10 * ((100vw - 320px) / 880));
   }
 
   .input {
     height: calc(50px + 10 * ((100vw - 320px) / 880));
+  }
+
+  .input {
+    padding-right: calc(15px + 10 * ((100vw - 320px) / 880));
+  }
+
+  .input {
+    padding-left: calc(15px + 10 * ((100vw - 320px) / 880));
   }
 
   ._title {
@@ -2861,7 +2836,7 @@ section::after {
   }
 
   .services-full {
-    padding-top: calc(100px + 100 * ((100vw - 320px) / 880));
+    padding-top: calc(150px + 50 * ((100vw - 320px) / 880));
   }
 
   .services-full {
@@ -2888,8 +2863,20 @@ section::after {
     font-size: calc(24px + 4 * ((100vw - 320px) / 880));
   }
 
+  .reverse {
+    padding-top: calc(30px + 90 * ((100vw - 320px) / 880));
+  }
+
+  .reverse {
+    padding-bottom: calc(30px + 90 * ((100vw - 320px) / 880));
+  }
+
   .reverse__title {
     font-size: calc(24px + 4 * ((100vw - 320px) / 880));
+  }
+
+  .reverse__title:not(:last-child) {
+    margin-bottom: calc(10px + 5 * ((100vw - 320px) / 880));
   }
 
   .reverse__subtitle {
@@ -3126,6 +3113,15 @@ section::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .reverse__inner {
+    width: 100%;
+    display: block;
+  }
+
+  .reverse__info {
+    margin: 0px 0px 30px 0px;
   }
 }
 
