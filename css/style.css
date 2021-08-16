@@ -865,7 +865,7 @@ section::after {
   width: 1170px;
   height: 600px;
   z-index: 4;
-  background-image: url(../img/intro/dots.png);
+  background-image: url(../img/common/dots.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
