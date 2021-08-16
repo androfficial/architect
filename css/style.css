@@ -186,50 +186,6 @@ body._lock {
   padding: 0 15px;
 }
 
-@-webkit-keyframes anim {
-  0% {
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-
-  25% {
-    border-color: salmon;
-  }
-
-  50% {
-    border-color: rebeccapurple;
-  }
-
-  75% {
-    border-color: rosybrown;
-  }
-
-  100% {
-    border-color: orange;
-  }
-}
-
-@keyframes anim {
-  0% {
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-
-  25% {
-    border-color: salmon;
-  }
-
-  50% {
-    border-color: rebeccapurple;
-  }
-
-  75% {
-    border-color: rosybrown;
-  }
-
-  100% {
-    border-color: orange;
-  }
-}
-
 body:not(.enable-fullpage) .pagination {
   display: none;
 }
@@ -995,7 +951,7 @@ section::after {
   width: 725px;
   height: 725px;
   z-index: 4;
-  background-image: url(../img/about/circle.png);
+  background-image: url(../img/common/circle.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
@@ -1009,7 +965,7 @@ section::after {
   width: 1000px;
   height: 260px;
   z-index: 4;
-  background-image: url(../img/about/dots.png);
+  background-image: url(../img/common/dots.png);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
@@ -1099,7 +1055,7 @@ section::after {
   width: 725px;
   height: 725px;
   z-index: 4;
-  background-image: url(../img/services/dots.png);
+  background-image: url(../img/common/circle-full.png);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -1224,7 +1180,7 @@ section::after {
   width: 725px;
   height: 725px;
   z-index: 4;
-  background-image: url(../img/projects/dots-1.png);
+  background-image: url(../img/common/circle-full.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
@@ -1238,7 +1194,7 @@ section::after {
   height: 725px;
   bottom: 0;
   z-index: 4;
-  background-image: url(../img/projects/dots-2.png);
+  background-image: url(../img/common/circle.png);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
@@ -1426,7 +1382,7 @@ section::after {
   width: 725px;
   height: 725px;
   z-index: 4;
-  background-image: url(../img/holiday/dots-1.png);
+  background-image: url(../img/common/circle-full.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
@@ -1440,7 +1396,7 @@ section::after {
   height: 725px;
   bottom: 0;
   z-index: 4;
-  background-image: url(../img/holiday/dots-2.png);
+  background-image: url(../img/common/circle.png);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
@@ -1629,7 +1585,7 @@ section::after {
   width: 725px;
   height: 725px;
   z-index: 4;
-  background-image: url(../img/testimonials/dots-2.png);
+  background-image: url(../img/common/circle.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
@@ -1643,7 +1599,7 @@ section::after {
   width: 725px;
   height: 600px;
   z-index: 4;
-  background-image: url(../img/testimonials/dots-1.png);
+  background-image: url(../img/common/dots-are-wide.png);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
@@ -1771,7 +1727,7 @@ section::after {
   width: 725px;
   height: 725px;
   z-index: 4;
-  background-image: url(../img/contacts/dots-2.png);
+  background-image: url(../img/common/circle.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
@@ -1785,7 +1741,7 @@ section::after {
   width: 950px;
   height: 230px;
   z-index: 4;
-  background-image: url(../img/contacts/dots.png);
+  background-image: url(../img/common/dots.png);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover;
