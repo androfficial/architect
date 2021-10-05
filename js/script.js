@@ -118,7 +118,7 @@ if (window.innerWidth > 769 && document.querySelector('body').classList.contains
       menu: '#menu-list',
       scrollOverflow: true,
       anchors: ['secIntro', 'secAbout', 'secServices', 'secProjects', 'secHoliday', 'secTestimonials', 'secContacts'],
-      // normalScrollElements: '#map',
+      normalScrollElements: '.info-header__submenu',
       // responsiveWidth: 769,
       // responsiveHeight: 626
    });
