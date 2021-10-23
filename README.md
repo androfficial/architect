@@ -1,5 +1,5 @@
 ### Stack:
-* Gulp-4;
+* Gulp-4
 * CSS Flexbox
 * CSS Grid Layout
 * JavaScript
