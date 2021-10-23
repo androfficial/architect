@@ -7,4 +7,4 @@
 * Fslightbox
 * Form validation
 * BEM methodology
-* Responsive, elastic and cross-browser layout.
+* Responsive and cross-browser layout.
