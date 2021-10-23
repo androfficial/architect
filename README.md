@@ -3,6 +3,7 @@
 * CSS Flexbox
 * CSS Grid Layout
 * JavaScript
+* SCSS
 * FullPage.js
 * Fslightbox
 * Form validation
