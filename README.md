@@ -2,7 +2,7 @@
 
 Website for an architecture studio: a home page that scrolls one full-screen section at a time, a photo gallery page and a service page. Built in August 2021 as a learning project.
 
-**Live demo:** [androfficial.github.io/architect](https://androfficial.github.io/architect/)
+**Live demo:** [androfficial.github.io/html-architect](https://androfficial.github.io/html-architect/)
 
 ## Features
 
@@ -26,8 +26,8 @@ Website for an architecture studio: a home page that scrolls one full-screen sec
 The repository holds the compiled site, with no dependencies and no build step. The icons come from an external SVG sprite that browsers do not load from `file://`, so serve the folder over HTTP, for example with `npx serve .` on Node.js 18 or later.
 
 ```bash
-git clone https://github.com/androfficial/architect.git
-cd architect
+git clone https://github.com/androfficial/html-architect.git
+cd html-architect
 npx serve .
 ```
 
