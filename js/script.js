@@ -241,9 +241,9 @@ if (forms) {
    
             let error = checkValueInput(form);
             if (error === 0) {
-               console.log('Все поля успешно заполнены.');
+               console.log('All fields are filled in successfully.');
             } else {
-               console.log('Пожалуйста, заполните поля.');
+               console.log('Please fill in the fields.');
             }
          }
       });
